@@ -1,0 +1,39 @@
+body {
+	padding-top: 60px;
+}
+.mark {
+	color:#F00;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+	background-color: #eeeeee;
+}
+.copy {
+	font-size: 12px;
+}
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a {
+	color: #bababa;
+}
+
+.accordion-group {
+	margin-bottom: 5px;
+}
+.accordion-heading a {
+	outline: none;
+}
+.accordion-heading a:hover {
+	text-decoration: none;
+}
+.accordion-inner {
+	padding: 4px;
+}
+
+.img-polaroid {
+	float: left;
+	margin-right: 15px;
+	vertical-align: top;
+}
+.img-loader {
+	float: right;
+}

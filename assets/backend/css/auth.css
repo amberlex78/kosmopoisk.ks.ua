@@ -1,0 +1,17 @@
+html, body {
+	background-color: #666;
+}
+.alert, .modal {
+	position: relative;
+	margin: 0 auto;
+	left: auto;
+	z-index: 1
+}
+.alert {
+	width: 360px;
+	top: 140px;
+}
+.modal {
+	width: 410px;
+	top: 160px;
+}
