@@ -2,6 +2,8 @@
 
 Developed on the Kohana 3.2.1 framework
 
+Requirements: PHP 5.3, MySQL 5.7
+
 ## Config
 
 Copy `application/config/database.dist.php` to `application/config/database.php` and set keys for DB
