@@ -112,7 +112,7 @@ if (Kohana::$environment === Kohana::PRODUCTION)
  */
 Kohana::init(array(
 	'base_url' => $_SERVER['REMOTE_ADDR'] == '127.0.0.1'
-		? 'http://kosmopoisk.local'
+		? 'http://kosmopoisk.test'
 		: 'https://kosmopoisk.ks.ua',
 	'index_file' => FALSE,
 	'errors'     => TRUE,
