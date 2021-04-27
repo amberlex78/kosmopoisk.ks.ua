@@ -44,7 +44,10 @@ define('EXT', '.php');
  * When using a legacy application with PHP >= 5.3, it is recommended to disable
  * deprecated notices. Disable with: E_ALL & ~E_DEPRECATED
  */
-error_reporting(E_ALL | E_STRICT);
+if (version_compare(PHP_VERSION, '5.3') > 0)
+	error_reporting(E_ALL & ~E_DEPRECATED);
+else
+	error_reporting(E_ALL | E_STRICT);
 
 /**
  * End of standard configuration! Changing any of the code below should only be
