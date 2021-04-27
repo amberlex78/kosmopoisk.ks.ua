@@ -2,7 +2,7 @@
 
 class Kohana_Exception extends Kohana_Kohana_Exception
 {
-	public static function handler(Exception $e)
+	public static function handler($e)
 	{
 		// Стандартная обработка, если проект на стадии разработки
 		if (Kohana::DEVELOPMENT === Kohana::$environment)

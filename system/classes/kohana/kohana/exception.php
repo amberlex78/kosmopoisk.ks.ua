@@ -85,7 +85,7 @@ class Kohana_Kohana_Exception extends Exception {
 	 * @param   Exception   $e
 	 * @return  boolean
 	 */
-	public static function handler(Exception $e)
+	public static function handler($e)
 	{
 		try
 		{
@@ -206,7 +206,7 @@ class Kohana_Kohana_Exception extends Exception {
 	 * @param   Exception   $e
 	 * @return  string
 	 */
-	public static function text(Exception $e)
+	public static function text($e)
 	{
 		return sprintf('%s [ %s ]: %s ~ %s [ %d ]',
 			get_class($e), $e->getCode(), strip_tags($e->getMessage()), Debug::path($e->getFile()), $e->getLine());
