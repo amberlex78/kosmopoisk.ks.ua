@@ -8,7 +8,8 @@ Requirements: PHP 5.2 - 5.6, MySQL 5.7
 
 Permissions:
 ~~~
-sudo chmod 0777 uploads application/cache application/logs
+cd www/kosmopoisk.ks.ua
+sudo chmod 0777 -R uploads application/cache application/logs
 sudo chmod 0666 application/config/app.php
 ~~~
 
