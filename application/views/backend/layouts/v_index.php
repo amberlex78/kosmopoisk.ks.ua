@@ -36,9 +36,6 @@
 <div class="container">
 
 	<div class="row">
-		<div class="span3">
-			<?php echo $block_left ?>
-		</div>
 		<div class="span9">
 			<?php echo $message ?>
 			<fieldset>
@@ -46,6 +43,9 @@
 				<?php echo $block_center ?>
 			</fieldset>
 		</div>
+        <div class="span3">
+            <?php echo $block_left ?>
+        </div>
 	</div>
 
 	<div class="row">
