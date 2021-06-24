@@ -16,7 +16,12 @@
 			<span class="pg-status">[ <?php echo __('app.caption.status_off') ?> ]</span>
 		<?php endif ?>
 
-		<h2><?php echo HTML::anchor('article/' . $o_article->slug, $o_article->title) ?></h2>
+		<h2>
+            <?php if($is_admin) { ?>
+                <?= HTML::anchor(ADMIN . '/publications/edit_article/' .  $o_article->id, '<i class="icon-edit"></i>', array('title' => 'Редактировать статью')) ?>
+            <?php } ?>
+            <?php echo HTML::anchor('article/' . $o_article->slug, $o_article->title) ?>
+        </h2>
 
 		<?php
 			if ($o_article->fimage AND is_file(IMG_PUBLICATIONS_DIR . $o_article->fimage))

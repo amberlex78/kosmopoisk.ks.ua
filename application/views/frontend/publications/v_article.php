@@ -16,7 +16,12 @@ elseif ($is_admin)
 <?php endif ?>
 
 
-<h1><?php echo $o_article->title ?></h1>
+<h1>
+    <?php if($is_admin) { ?>
+        <?= HTML::anchor(ADMIN . '/publications/edit_article/' .  $o_article->id, '<i class="icon-edit"></i>', array('title' => 'Редактировать статью')) ?>
+    <?php } ?>
+    <?php echo $o_article->title ?>
+</h1>
 <?php
 	if ($o_article->fimage AND is_file(IMG_PUBLICATIONS_DIR . $o_article->fimage))
 		echo HTML::image(IMG_PUBLICATIONS_URL . $o_article->fimage, array('class' => 'img-polaroid left', 'alt' => ''));
