@@ -37,7 +37,7 @@
 			<?php echo Form::open(URL::Base() . 'search', array('id' =>'frm_search', 'class' => 'navbar-search pull-right')) ?>
 				<div class="input-append">
 					<?php echo Form::input('search_string', '', array('id' => 'appendedInputButton', 'class' => 'span2', 'placeholder' => __('app.caption.search'))) ?>
-					<button class="btn" type="submit"><i class="icon-search"></i></button>
+					<button class="btn" type="submit" aria-label="Поиск"><i class="icon-search"></i></button>
 				</div>
 			</form>
 		</div>
@@ -89,13 +89,14 @@
         tab_indent: "10px",
         tab_bg_color: "#264263",
         tab_border_color: "#FFFFFF",
-        tab_image_url: "http://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/9c1f751cd883e990123aab292c606f93/bottom-left/1/tab.png",
+        tab_image_url: "https://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/9c1f751cd883e990123aab292c606f93/bottom-left/1/tab.png",
         tab_border_width: 0
     };
 
     (function() {
         var script = document.createElement('script');
-        script.type = 'text/javascript'; script.async = true;
+        script.type = 'text/javascript';
+        script.async = true;
         script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
         document.getElementsByTagName('head')[0].appendChild(script);
     })();

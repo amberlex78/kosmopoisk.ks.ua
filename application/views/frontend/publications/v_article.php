@@ -24,7 +24,12 @@ elseif ($is_admin)
 </h1>
 <?php
 	if ($o_article->fimage AND is_file(IMG_PUBLICATIONS_DIR . $o_article->fimage))
-		echo HTML::image(IMG_PUBLICATIONS_URL . $o_article->fimage, array('class' => 'img-polaroid left', 'alt' => ''));
+        echo HTML::image(IMG_PUBLICATIONS_URL . $o_article->fimage, array(
+            'class' => 'img-polaroid left',
+            'alt' => '$o_article->title',
+            'width' => '160',
+            'height' => '130',
+        ));
 
 	if (isset($o_article->preview))
 		echo '<p>'.$o_article->preview.'</p>';

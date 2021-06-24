@@ -12,15 +12,17 @@
             <?php if($is_admin) { ?>
                 <?= HTML::anchor(ADMIN . '/publications/edit_article/' .  $o_article->id, '<i class="icon-edit"></i>', array('title' => 'Редактировать статью')) ?>
             <?php } ?>
-            <?php echo HTML::anchor('article/' . $o_article->slug, $o_article->title) ?>
+            <?php echo HTML::anchor('article/' . $o_article->slug, $o_article->title, ['']) ?>
         </h2>
 
 		<?php
 			if ($o_article->fimage AND is_file(IMG_PUBLICATIONS_DIR . $o_article->fimage))
-				echo HTML::anchor(
-					'article/' . $o_article->slug,
-					HTML::image(IMG_PUBLICATIONS_URL . $o_article->fimage, array('class' => 'img-polaroid left', 'alt' => ''))
-				);
+                echo HTML::image(IMG_PUBLICATIONS_URL . $o_article->fimage, array(
+                    'class' => 'img-polaroid left',
+                    'alt' => $o_article->title,
+                    'width' => '160',
+                    'height' => '130',
+                ));
 		?>
 
 		<?php echo $o_article->preview ?>
