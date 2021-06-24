@@ -20,9 +20,9 @@
 return array(
 	'default' => array(
 		'style'      	=> 'alpha',
-		'width'      	=> 102,
-		'height'     	=> 30,
-		'complexity' 	=> 4, // min = 4
+		'width'      	=> 112,
+		'height'     	=> 40,
+		'complexity' 	=> 6, // min = 4
 		'background' 	=> '',
 		'fontpath'   	=> MODPATH.'captcha/fonts/',
 		'fonts'      	=> array('DejaVuSerif.ttf'),
