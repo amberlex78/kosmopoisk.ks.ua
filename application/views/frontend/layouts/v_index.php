@@ -77,7 +77,7 @@
 
 <?php foreach ($scripts as $file_script) echo Html::script($file_script) . "\n" ?>
 
-<script type="text/javascript">
+<script>
     var reformalOptions = {
         project_id: 985002,
         project_host: "ks-kosmopoisk.reformal.ru",
@@ -95,7 +95,7 @@
         script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
         document.getElementsByTagName('head')[0].appendChild(script);
     })();
-</script><noscript><a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" /></a><a href="http://ks-kosmopoisk.reformal.ru">Oтзывы и предложения для Научно-исследовательское объединение «Херсон – Космопоиск»</a></noscript>
+</script><noscript><a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" alt="reformal.ru"/></a><a href="http://ks-kosmopoisk.reformal.ru">Oтзывы и предложения для Научно-исследовательское объединение «Херсон – Космопоиск»</a></noscript>
 
 <?php if (Kohana::$environment !== Kohana::PRODUCTION) echo View::factory('profiler/stats') ?>
 

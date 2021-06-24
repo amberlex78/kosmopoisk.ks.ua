@@ -44,7 +44,7 @@ elseif ($is_admin)
 						echo $adm_link . ' <i class="icon-book"></i>';
 
 				if ($o_article->source)
-					echo '<noindex>' . HTML::anchor($o_article->source, __('publications.article.source'), array('rel' => 'nofollow', 'target'=> '_blank')) . '</noindex> <i class="icon-external-link"></i><br />';
+					echo HTML::anchor($o_article->source, __('publications.article.source'), array('rel' => 'nofollow', 'target'=> '_blank')) . ' <i class="icon-external-link"></i><br />';
 
 				if (count($tags))
 				{
