@@ -42,4 +42,5 @@
 
 <?php endforeach ?>
 
+<hr>
 <?php echo $pagination ?>

@@ -102,8 +102,9 @@ ul.linksList li {
 	margin: 1px 0;
 }
 ul.linksList li a {
+	font-size: larger;
 	display:block;
-	padding: 5px 0 5px 10px;
+	padding: 10px 0 10px 10px;
 	text-decoration:none;
 }
 ul.linksList li a:hover, li.menu-active a {

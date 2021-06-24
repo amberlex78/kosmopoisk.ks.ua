@@ -4,9 +4,9 @@
 	*/
 
 	// Number of page links in the begin and end of whole range
-	$count_out = ( ! empty($config['count_out'])) ? (int) $config['count_out'] : 3;
+	$count_out = ( ! empty($config['count_out'])) ? (int) $config['count_out'] : 2;
 	// Number of page links on each side of current page
-	$count_in = ( ! empty($config['count_in'])) ? (int) $config['count_in'] : 3;
+	$count_in = ( ! empty($config['count_in'])) ? (int) $config['count_in'] : 2;
 
 	// Beginning group of pages: $n1...$n2
 	$n1 = 1;
@@ -49,13 +49,12 @@
 		$links[$i] = $i;
 ?>
 
-<div class="both"></div>
-<div class="pagination pagination-right">
+<div class="pagination pagination-right pagination-large">
 	<ul>
 		<?php if ($previous_page !== FALSE): ?>
-			<li><a href="<?php echo HTML::chars($page->url($previous_page)) ?>" rel="prev"><i class="icon-chevron-left"></i> <?php echo __('pagination.frontend_previous') ?></a></li>
+			<li><a href="<?php echo HTML::chars($page->url($previous_page)) ?>" rel="prev" title="Предыдущая"><i class="icon-chevron-left"></i> </a></li>
 		<?php else: ?>
-			<li class="active"><a href="#"><i class="icon-chevron-left"></i> <?php echo __('pagination.frontend_previous') ?></a></li>
+			<li class="active"><a href="#" title="Предыдущая"><i class="icon-chevron-left"></i> </a></li>
 		<?php endif ?>
 
 		<?php foreach ($links as $number => $content): ?>
@@ -67,9 +66,9 @@
 		<?php endforeach ?>
 
 		<?php if ($next_page !== FALSE): ?>
-			<li><a href="<?php echo HTML::chars($page->url($next_page)) ?>" rel="next"><?php echo __('pagination.frontend_next') ?> <i class="icon-chevron-right"></i></a></li>
+			<li><a href="<?php echo HTML::chars($page->url($next_page)) ?>" rel="next" title="Следующая"> <i class="icon-chevron-right"></i></a></li>
 		<?php else: ?>
-			<li class="active"><a href="#"><?php echo __('pagination.frontend_next') ?> <i class="icon-chevron-right"></i></a></li>
+			<li class="active"><a href="#" title="Следующая"> <i class="icon-chevron-right"></i></a></li>
 		<?php endif ?>
 	</ul>
 </div><!-- .pagination -->
