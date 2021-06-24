@@ -12,8 +12,7 @@ return array
 
 			'assets/vendors/bootstrap/css/bootstrap.min.css',
 			'assets/vendors/bootstrap/css/bootstrap-responsive.min.css',
-            'assets/vendors/awesome/css/bootstrap-combined.no-icons.min.css',
-            'assets/vendors/awesome/css/font-awesome.min.css',
+			'assets/vendors/awesome/css/font-awesome.min.css',
 
 			// Мои стили
 			'assets/css/style.css',
