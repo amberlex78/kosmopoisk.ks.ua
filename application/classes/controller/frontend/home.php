@@ -42,7 +42,20 @@ class Controller_Frontend_Home extends Controller_Frontend
 		$this->block_center = View::factory('frontend/home/v_index',
 			array(
 				'o_page' => $o_page,
-				'o_last_articles' =>
+                'o_tags' => DB::select(
+                    'publications_tags.name',
+                    'publications_tags.slug',
+                    array('COUNT("publications_articles_tags.tag_id")', 'posts_count')
+                )
+                    ->from('publications_articles_tags')
+                    ->join('publications_tags')
+                    ->on('publications_articles_tags.tag_id', '=', 'publications_tags.id')
+                    ->order_by('name')
+                    //->order_by('posts_count', 'desc')
+                    ->group_by('publications_tags.id')
+                    ->execute()
+                    ->as_array(),
+                'o_last_articles' =>
 					View::factory('frontend/home/v_last_articles',
 						array(
 							'pagination' => $pagination,
