@@ -20,7 +20,7 @@
 			<?php foreach ($o_articles as $o_article): ?>
 				<tr>
 					<td>
-						<?php if (is_file(IMG_PUBLICATIONS_DIR . $o_article->fimage)) echo HTML::image(IMG_PUBLICATIONS_URL . $o_article->fimage, array('class' => 'span1')) ?>
+						<?php if (is_file(IMG_PUBLICATIONS_DIR . $o_article->fimage)) echo HTML::image(IMG_PUBLICATIONS_URL . $o_article->fimage, array('class' => 'img')) ?>
 					</td>
 					<td>
 						<?php echo $o_article->title ?>
