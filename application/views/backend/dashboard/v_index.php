@@ -3,13 +3,22 @@
 <h4 class="text-success">Привет, <?php echo $user->username ?> :)</h4>
 <hr>
 <h5>Обновления CMS:</h5>
+<p><span class="label label-info">[2021.06.24]</span> Если залогинены под админом - можно редактировать статью прямо с сайта нажав на значок <i class="icon-edit"></i> который будет виден перед названием статьи</p>
+<p><?php echo HTML::image('uploads/images/edit_article.png', array('class' => 'img-rounded', 'style' => 'width: 870px')) ?></p>
+<hr>
 <p><span class="label label-info">[2021.06.24]</span> Внизу на главной показывается <a href="https://kosmopoisk.ks.ua#tags" target="_blank">список тегов</a></p>
+<p><?php echo HTML::image('uploads/images/tags.png', array('class' => 'img-rounded', 'style' => 'width: 870px')) ?></p>
+<hr>
 <p><span class="label label-info">[2021.06.22]</span> Если залогинены как админ есть в меню кнопка '+ Добавить статью', чтобы не переходить в админку</p>
 <p><?php echo HTML::image('uploads/images/add_article.png', array('class' => 'img-rounded', 'style' => 'width: 870px')) ?></p>
+<hr>
 <p><span class="label label-info">[2021.06.02]</span> Перенес панель с меню вправо. При добавлении статьи удобнее видеть редактор текста посредине экрана.</p>
 <p><?php echo HTML::image('uploads/images/panel.png', array('class' => 'img-rounded', 'style' => 'width: 870px')) ?></p>
+<hr>
 <p><span class="label label-info">[2012.10.30]</span> При добавлении (редактировании) статьи появилась вкладка "Другое", туда перенесены теги статьи и добавлено поле для ссылки на первоисточник статьи, если такавой есть</p>
+<hr>
 <p><span class="label label-info">[2012.10.25]</span> Добавил миниатюры изображений при выводе списка статей в админке</p>
+<hr>
 <p><span class="label label-info">[2012.10.23]</span> Исправлена опечатка при выводе месяца "Октября"</p>
 
 
