@@ -28,7 +28,10 @@
 					echo '<li' . $active . '>' . HTML::anchor($static_page->slug, $icon . $static_page->title_menu, array('style' => $style)) . '</li>';
 				}
 			?>
-            <li><?= $is_admin ? HTML::anchor(ADMIN . '/publications/add_article', '<i class="icon-plus"></i> Добавить статью') : '' ?></li>
+            <?php if ($is_admin) {?>
+                <li><?= HTML::anchor(ADMIN . '/publications/add_article', ' <i class="icon-plus"></i> Добавить статью') ?></li>
+                <li><?= HTML::anchor(ADMIN, ' <i class="icon-cogs"></i> В админку', ['target' => '_blank']) ?></li>
+            <?php } ?>
 		</ul>
 		<div class="pull-right">
 			<?php echo Form::open(URL::Base() . 'search', array('id' =>'frm_search', 'class' => 'navbar-search pull-right')) ?>
