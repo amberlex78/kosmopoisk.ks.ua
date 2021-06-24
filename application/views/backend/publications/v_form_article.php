@@ -5,7 +5,6 @@
 <ul class="nav nav-tabs">
 	<li class="active"><a href="#page" data-toggle="tab"><?php echo __('publications.article.caption') ?></a></li>
 	<li><a href="#seo" data-toggle="tab"><?php echo __('seo.caption') ?></a></li>
-	<li><a href="#other" data-toggle="tab"><?php echo __('app.caption.other') ?></a></li>
 </ul>
 
 <div class="tab-content">
@@ -24,8 +23,17 @@
             array('label' => 'publications.article.preview')
         );
         echo App_Formtb::ckeditor('text', $data->text, array('label' => 'publications.article.text'));
-		?>
-		<div class="controls">
+        echo App_Formtb::input('tags', $tags,
+            array('class' => 'span7'),
+            array('label' => 'publications.article.tags', 'help' => 'publications.article.tags_h')
+        );
+        echo App_Formtb::input('source', $data->source,
+            array('class' => 'span7'),
+            array('label' => 'publications.article.source', 'help' => 'publications.article.source_h', 'errors' => $errors)
+        );
+        ?>
+
+        <div class="controls">
 			<p>
 				<span class="img-loader"></span>
 				<div id="image">
@@ -56,7 +64,7 @@
 				<?php echo __('app.action.upload_image') ?>
 			</button>
 		</div>
-	</div>
+    </div>
 
 	<div class="tab-pane fade" id="seo">
 		<?php
@@ -77,19 +85,6 @@
 			array('label' => 'seo.meta_k', 'help' => 'seo.meta_k_page_h')
 		);
 		?>
-	</div>
-
-	<div class="tab-pane fade" id="other">
-	<?php
-		echo App_Formtb::input('tags', $tags,
-			array('class' => 'span7'),
-			array('label' => 'publications.article.tags', 'help' => 'publications.article.tags_h')
-		);
-		echo App_Formtb::input('source', $data->source,
-			array('class' => 'span7'),
-			array('label' => 'publications.article.source', 'help' => 'publications.article.source_h', 'errors' => $errors)
-		);
-	?>
 	</div>
 </div>
 

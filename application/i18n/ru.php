@@ -217,7 +217,7 @@ return array
 	'publications.article.tags'              => 'Теги',
 	'publications.article.source'            => 'Первоисточник',
 	'publications.article.source_h'          => 'Ссылка на сайт-первоисточник информации, если таковой имеется',
-	'publications.article.tags_h'            => 'Теги (метки) для статьи через запятую. По ним может производиться поиск на сайте в облаке тегов',
+	'publications.article.tags_h'            => 'Теги (метки) для статьи через запятую. По ним может производиться поиск с главной страницы сайта <br><a href="https://kosmopoisk.ks.ua#tags" target="_blank">Посмотреть список тегов</a> (откроется в новой вкладке)',
 	'publications.article.amount'            => 'Статей',
 	'publications.article.no_articles'       => 'Статей нет',
 	'publications.article.per_page'          => 'Количество статей на странице',

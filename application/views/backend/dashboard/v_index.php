@@ -3,6 +3,9 @@
 <h4 class="text-success">Привет, <?php echo $user->username ?> :)</h4>
 <hr>
 <h5>Обновления CMS:</h5>
+<p><span class="label label-info">[2021.06.24]</span> В админке для добавления или редактирования статьи поля: "Теги" и "Первоисточник" теперь заполняются под "Полный текст статьи". Вкладка "Другое" убрана - так меньше движений совершать нужно и чтобы если нужно, то не забывать их заполнять</p>
+<p><?php echo HTML::image('uploads/images/tags-link.png', array('class' => 'img-rounded', 'style' => 'width: 870px')) ?></p>
+<hr>
 <p><span class="label label-info">[2021.06.24]</span> Если залогинены под админом - можно редактировать статью прямо с сайта нажав на значок <i class="icon-edit"></i> который будет виден перед названием статьи</p>
 <p><?php echo HTML::image('uploads/images/edit_article.png', array('class' => 'img-rounded', 'style' => 'width: 870px')) ?></p>
 <hr>
