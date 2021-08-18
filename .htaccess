@@ -18,15 +18,19 @@ RewriteBase /
 	Deny From All
 </Files>
 
+# Uncomment for hosting
 #RewriteCond %{HTTP_HOST} ^www\.(.*)$
 #RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
 
+# Uncomment for hosting
 #RewriteCond %{HTTPS} off
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Protect application and system files from being viewed
-RewriteRule ^(?:application|modules|system)\b.* index.php?$0 [L]
-#RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
+RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
+
+# For ukraine.com.ua hosting
+#RewriteRule ^(?:application|modules|system)\b.* index.php?$0 [L]
 
 
 # Allow any files or directories that exist to be displayed directly
@@ -35,12 +39,14 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 
 # Rewrite all other URLs to index.php/URL
-RewriteRule .* index.php?$0 [PT]
-#RewriteRule .* index.php/$0 [PT]
+RewriteRule .* index.php/$0 [PT]
+
+# For ukraine.com.ua hosting
 #RewriteRule .* index.php?kohana_uri=$0 [PT,L,QSA]
 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php54” package as the default “PHP” programming language.
+# Uncomment 3 lines for hosting
 #<IfModule mime_module>
 #  AddHandler application/x-httpd-ea-php54___lsphp .php .php5 .phtml
 #</IfModule>
