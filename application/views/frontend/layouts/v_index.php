@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="<?php echo Html::chars($description) ?>" />
 	<meta name="keywords" content="<?php echo Html::chars($keywords) ?>" />
+    <meta name="verify-reformal" content="4b7591879ca3f8310901b0d4" />
 	<?php foreach ($styles as $file_style) echo Html::style($file_style) . "\n\t" ?>
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>	<![endif]-->
