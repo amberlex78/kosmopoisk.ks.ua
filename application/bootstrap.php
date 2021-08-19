@@ -152,4 +152,3 @@ require(APPPATH.'routes'.EXT);
 
 // Vendors
 require_once Kohana::find_file('vendors', 'phpthumb/ThumbLib.inc');
-
