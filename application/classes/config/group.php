@@ -14,6 +14,9 @@ class Config_Group extends Kohana_Config_Group
 			$filename = $files[count($files)-1];
 
 		file_put_contents($filename, $this->encode($this->getArrayCopy()));
+
+		if (function_exists('opcache_reset'))
+			opcache_reset();
 	}
 
 	protected function encode($array, $pref = "\t")
