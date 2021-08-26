@@ -11,17 +11,17 @@ services:
 #      - "80:80"
 
   db:
-    image: mariadb
+    image: mysql:5.7
     restart: always
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: kosmopoisk
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev
     volumes:
-      - mariadb:/var/lib/mysql
+      - mysqldb:/var/lib/mysql
 
   web:
     build:
@@ -45,4 +45,4 @@ services:
 #      VIRTUAL_HOST: adminer.test
 
 volumes:
-  mariadb:
+  mysqldb:

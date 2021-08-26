@@ -1,17 +1,5 @@
 <?php
 
-//$servername = "127.0.0.1";
-//$username = "root";
-//$password = "root";
-//$dbname = "kosmopoisk";
-//
-//$conn = new mysqli($servername, $username, $password, $dbname);
-//// Check connection
-//if ($conn->connect_error) {
-//    die("Connection failed: " . $conn->connect_error);
-//}
-//die('Connection success!');
-
 /**
  * The directory in which your application specific resources are located.
  * The application directory must contain the bootstrap.php file.
@@ -56,10 +44,12 @@ define('EXT', '.php');
  * When using a legacy application with PHP >= 5.3, it is recommended to disable
  * deprecated notices. Disable with: E_ALL & ~E_DEPRECATED
  */
-if (version_compare(PHP_VERSION, '5.3') > 0)
-	error_reporting(E_ALL & ~E_DEPRECATED);
-else
-	error_reporting(E_ALL | E_STRICT);
+
+if (version_compare(PHP_VERSION, '5.3') > 0) {
+    error_reporting(E_ALL & ~E_DEPRECATED | E_STRICT);
+} else {
+    error_reporting(E_ALL | E_STRICT);
+}
 
 /**
  * End of standard configuration! Changing any of the code below should only be

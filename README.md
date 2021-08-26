@@ -17,10 +17,10 @@ In the `application/bootstrap.php` file set `base_url` key for `Kohana::init`
 
 Copy `application/config/database.dist.php` to `application/config/database.php` and set et params for your database: 
 ```
-'hostname'   => 'localhost',
-'database'   => 'your_database_name',
-'username'   => 'root',
-'password'   => 'root',
+'hostname'   => 'db',
+'database'   => 'kosmopoisk',
+'username'   => 'dev',
+'password'   => 'dev',
 ```
 
 Example database dump in the `db.sql` file.

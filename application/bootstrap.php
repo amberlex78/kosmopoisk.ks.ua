@@ -83,7 +83,7 @@ if ($_SERVER['REMOTE_ADDR']=='127.0.0.1')
 else
 	Kohana::$environment = Kohana::PRODUCTION;
 
-// Или устанавливать в .htaccess
+// Или устанавливать в .htaccess (установленно)
 // SetEnv KOHANA_ENV development
 // SetEnv KOHANA_ENV production
 */
@@ -92,7 +92,7 @@ else
 if (Kohana::$environment === Kohana::PRODUCTION)
 {
 	// Выключаем уведомления и строгие ошибки
-	error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+	error_reporting(E_ALL & ~E_DEPRECATED ^ E_NOTICE ^ E_STRICT);
 }
 
 /**
@@ -111,7 +111,7 @@ if (Kohana::$environment === Kohana::PRODUCTION)
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url' => $_SERVER['REMOTE_ADDR'] == '127.0.0.1'
+	'base_url' => $_SERVER['HTTP_HOST']=='kosmopoisk.test'
 		? 'http://kosmopoisk.test'
 		: 'https://kosmopoisk.ks.ua',
 	'index_file' => FALSE,
