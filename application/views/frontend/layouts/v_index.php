@@ -67,6 +67,7 @@
 						<p class="muted copy">
 							<small>
 								<?php echo $sitecopy . date('Y', time()) ?>г.<br/>
+                                <?php echo usage_time_and_memory_front() ?>
 								<br/>
 							</small>
 						</p>

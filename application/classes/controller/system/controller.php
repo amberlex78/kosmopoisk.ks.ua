@@ -94,5 +94,12 @@ function usage_time_and_memory()
 {
 	return
 		'Time: '   . number_format((microtime(TRUE) - KOHANA_START_TIME), 4) . 's | ' .
-		'Memory: ' . number_format((memory_get_usage() - KOHANA_START_MEMORY) / 1024 / 1024  , 1) . 'MB';
+		'Memory: ' . number_format((memory_get_usage() - KOHANA_START_MEMORY) / 1024 / 1024  , 1) . 'MB | ' .
+		'PHP v' . PHP_VERSION;
+}
+function usage_time_and_memory_front()
+{
+	return
+		'Сгенерировано: ' . number_format((microtime(TRUE) - KOHANA_START_TIME) * 1000) . ' ms | ' .
+		'Память: '        . number_format((memory_get_usage() - KOHANA_START_MEMORY) / 1024 / 1024  , 1) . ' MB';
 }
