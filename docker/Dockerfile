@@ -52,8 +52,6 @@ RUN docker-php-ext-install \
     tokenizer\
     zip
 
-RUN apt-get locales tzdata \
-
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 COPY . /var/www/html/
