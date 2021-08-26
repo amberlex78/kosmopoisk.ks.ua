@@ -11,11 +11,13 @@ Permissions:
 cd www/kosmopoisk.ks.ua
 sudo chmod 0777 -R uploads application/cache application/logs
 sudo chmod 0666 application/config/app.php
+
+git config core.filemode false
 ~~~
 
 In the `application/bootstrap.php` file set `base_url` key for `Kohana::init`
 
-Copy `application/config/database.dist.php` to `application/config/database.php` and set et params for your database: 
+Copy `application/config/database.dist.php` to `application/config/database.php` and set et params for your database (for docker): 
 ```
 'hostname'   => 'db',
 'database'   => 'kosmopoisk',
@@ -33,8 +35,24 @@ or
 SetEnv KOHANA_ENV production
 ~~~
 
-Credentials your `site_url/admin`
+Credentials your `kosmopoisk.test/admin`
 ~~~
 login:    admin
 password: password
 ~~~
+
+## How to run
+
+Commands in Makefile
+
+`make build` is equivalent `docker-compose up --build -d`
+
+`make up` is equivalent `docker-compose up -d`
+
+`make down` is equivalent `docker-compose down --remove-orphans`
+
+`make restart` is equivalent `docker-compose down --remove-orphans`
+
+If you have running `mysql` and `apache` services you need stop these: `make stop-local-services`
+
+Run services: `start-local-services`
