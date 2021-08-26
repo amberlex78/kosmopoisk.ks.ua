@@ -1,5 +1,17 @@
 <?php
 
+//$servername = "127.0.0.1";
+//$username = "root";
+//$password = "root";
+//$dbname = "kosmopoisk";
+//
+//$conn = new mysqli($servername, $username, $password, $dbname);
+//// Check connection
+//if ($conn->connect_error) {
+//    die("Connection failed: " . $conn->connect_error);
+//}
+//die('Connection success!');
+
 /**
  * The directory in which your application specific resources are located.
  * The application directory must contain the bootstrap.php file.
