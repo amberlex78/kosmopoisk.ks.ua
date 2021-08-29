@@ -1,15 +1,7 @@
-#AuthType Basic
-#AuthName "Private zone"
-#AuthUserFile  /<your_path>/kosmopoisk.ks.ua/www/.htpasswd
-#require valid-user
-
 SetEnv KOHANA_ENV development
 #SetEnv KOHANA_ENV production
 
-# Turn on URL rewriting
 RewriteEngine On
-
-# Installation directory
 RewriteBase /
 
 # Protect hidden files from being viewed
@@ -32,11 +24,9 @@ RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
 # For ukraine.com.ua hosting
 #RewriteRule ^(?:application|modules|system)\b.* index.php?$0 [L]
 
-
 # Allow any files or directories that exist to be displayed directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
 
 # Rewrite all other URLs to index.php/URL
 RewriteRule .* index.php/$0 [PT]
